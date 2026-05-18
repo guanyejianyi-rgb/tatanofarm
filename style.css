@@ -1,0 +1,716 @@
+/* ============================
+   グローバルスタイル
+   ============================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, 'Hiragino Sans', 'ヒラギノ角ゴ Pro', 'Meiryo UI', 'メイリオ';
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+a {
+    color: #2d5a1e;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #1f3d12;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ============================
+   ナビゲーション
+   ============================ */
+
+.navbar {
+    background-color: #2d5a1e;
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 0.95rem;
+    transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+    color: #ffd700;
+}
+
+/* レスポンシブ ナビゲーション */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.85rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+}
+
+/* ============================
+   ヒーロー画像セクション
+   ============================ */
+
+.hero {
+    background: linear-gradient(135deg, #2d5a1e 0%, #4a8c2a 100%);
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin: 0.5rem 0;
+}
+
+.hero-content .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 50px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
+
+/* ============================
+   ページヘッダー
+   ============================ */
+
+.page-header {
+    background-color: #f0f8e8;
+    padding: 40px 0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    color: #2d5a1e;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* ============================
+   セクションスタイル
+   ============================ */
+
+section {
+    margin-bottom: 50px;
+}
+
+h2 {
+    color: #2d5a1e;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    border-bottom: 3px solid #4a8c2a;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #2d5a1e;
+    font-size: 1.3rem;
+    margin: 20px 0 10px 0;
+}
+
+h4 {
+    color: #2d5a1e;
+    font-size: 1.1rem;
+    margin: 15px 0 10px 0;
+}
+
+/* ============================
+   イントロダクションセクション
+   ============================ */
+
+.intro-section {
+    padding: 40px 0;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.intro-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.intro-card .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.intro-card h3 {
+    color: #2d5a1e;
+    margin-top: 0;
+}
+
+/* ============================
+   品種セクション
+   ============================ */
+
+.varieties-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+.varieties-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.variety-card {
+    background-color: #f8f8f8;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #4a8c2a;
+}
+
+.variety-card h3 {
+    color: #2d5a1e;
+    margin-top: 0;
+}
+
+/* ============================
+   ボタンスタイル
+   ============================ */
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #2d5a1e;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #1f3d12;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================
+   ニュースセクション
+   ============================ */
+
+.news-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+.news-card {
+    background-color: #f8f8f8;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #ffd700;
+    margin-bottom: 20px;
+}
+
+.news-card h3 {
+    color: #2d5a1e;
+    margin-top: 0;
+}
+
+.news-card .date {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.news-card .link {
+    color: #2d5a1e;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* ============================
+   ニュースリスト
+   ============================ */
+
+.news-list {
+    padding: 40px 0;
+}
+
+.news-card-full {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #4a8c2a;
+}
+
+.news-card-full h3 {
+    color: #2d5a1e;
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.news-card-full .date {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.news-card-full p {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.news-card-full a {
+    color: #2d5a1e;
+    font-weight: bold;
+}
+
+/* ============================
+   活動セクション
+   ============================ */
+
+.activity-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.activity-list {
+    padding: 40px 0;
+}
+
+.activity-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #4a8c2a;
+    text-align: left;
+}
+
+.activity-card h3 {
+    color: #2d5a1e;
+    margin-top: 0;
+}
+
+/* ============================
+   栽培記録セクション
+   ============================ */
+
+.cultivation-records {
+    padding: 40px 0;
+}
+
+.record-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #4a8c2a;
+}
+
+.record-card .date {
+    color: #2d5a1e;
+    font-weight: bold;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.record-card h4 {
+    color: #2d5a1e;
+    margin-top: 0;
+}
+
+.record-card p {
+    margin-bottom: 8px;
+    line-height: 1.8;
+}
+
+.record-card strong {
+    color: #2d5a1e;
+}
+
+/* ============================
+   情報カード
+   ============================ */
+
+.info-section {
+    padding: 40px 0;
+}
+
+.info-card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-top: 3px solid #4a8c2a;
+}
+
+.info-card h3 {
+    color: #2d5a1e;
+    margin-top: 0;
+}
+
+.info-card ul {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+/* ============================
+   お問い合わせセクション
+   ============================ */
+
+.contact-preview {
+    background-color: #f0f8e8;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-methods {
+    padding: 40px 0;
+}
+
+.contact-method {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #4a8c2a;
+}
+
+.contact-method h3 {
+    color: #2d5a1e;
+    margin-top: 0;
+}
+
+.contact-info {
+    background-color: #f8f8f8;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-size: 1.05rem;
+}
+
+.contact-info a {
+    color: #2d5a1e;
+    font-weight: bold;
+}
+
+.note {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* ============================
+   SNSボタン
+   ============================ */
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    color: white;
+}
+
+.social-btn.instagram {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-btn.x {
+    background-color: #000;
+}
+
+.social-btn.mail {
+    background-color: #4a8c2a;
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ============================
+   FAQ セクション
+   ============================ */
+
+.faq-section {
+    padding: 40px 0;
+}
+
+.faq-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #4a8c2a;
+}
+
+.faq-item h4 {
+    color: #2d5a1e;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    margin: 0;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* ============================
+   詳細コンテンツ
+   ============================ */
+
+.variety-detail {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    margin-bottom: 50px;
+}
+
+.detail-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+.detail-text ul {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+.detail-text ul li {
+    margin-bottom: 8px;
+}
+
+/* ============================
+   報告セクション
+   ============================ */
+
+.report-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* ============================
+   スケジュールセクション
+   ============================ */
+
+.schedule-section {
+    padding: 40px 0;
+}
+
+.schedule-section .info-card {
+    background-color: #f8f8f8;
+}
+
+/* ============================
+   メッセージセクション
+   ============================ */
+
+.message-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.message-section .info-card {
+    background-color: #f0f8e8;
+    border-top: 3px solid #4a8c2a;
+}
+
+.message-section .info-card strong {
+    font-size: 1.1rem;
+}
+
+/* ============================
+   ボタンセクション
+   ============================ */
+
+.button-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+/* ============================
+   フッター
+   ============================ */
+
+footer {
+    background-color: #2d5a1e;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* ============================
+   レスポンシブデザイン
+   ============================ */
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .page-header h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro-grid,
+    .varieties-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        gap: 0.5rem;
+    }
+
+    .social-buttons {
+        flex-direction: column;
+    }
+
+    .social-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-method {
+        margin-bottom: 15px;
+    }
+}
+
+/* ============================
+   その他のスタイル
+   ============================ */
+
+ul {
+    list-style-type: none;
+}
+
+ol {
+    margin-left: 20px;
+}
+
+p {
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
